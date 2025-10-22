@@ -12,10 +12,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 // Crea el componente proveedor
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [cartItems, setCartItems] = useState<Record<number, number>>({
-      14: 2, // Arroz Ala
-      15: 1, // Arvejas Partidas
-  });
+  const [cartItems, setCartItems] = useState<Record<number, number>>({});
 
   const updateQuantity = (productId: number, newQuantity: number) => {
     setCartItems(prevItems => {

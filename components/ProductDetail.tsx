@@ -150,16 +150,12 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack, a
       <div className="h-28"></div> 
       
       <div className="fixed bottom-0 w-full bg-white px-4 py-3 border-t shadow-[0_-2px_10px_rgba(0,0,0,0.1)] flex items-center gap-3">
-        <div className="flex-shrink-0">
-            <p className="text-xs text-gray-600">1 paquete de {product.weight}{product.unit}</p>
-            <p className="font-bold text-lg text-gray-900">{formatCurrency(product.price * localQuantity)}</p>
-        </div>
-        <div className="flex-1 flex items-center justify-center gap-[0.35rem] bg-pink-50 rounded-full p-1">
-            <button onClick={handleDecrease} className="text-orange-600 p-2 rounded-full disabled:text-gray-300" disabled={localQuantity <= 1}><MinusIcon className="w-6 h-6"/></button>
+        <div className="w-[120px] flex items-center justify-around bg-pink-50 rounded-full p-1">
+            <button onClick={handleDecrease} className="text-orange-600 p-1 rounded-full disabled:text-gray-300" disabled={localQuantity <= 1}><MinusIcon className="w-5 h-5"/></button>
             <span className="font-bold text-xl text-orange-600 w-8 text-center select-none">{localQuantity}</span>
-            <button onClick={handleIncrease} className="text-orange-600 p-2 rounded-full disabled:text-gray-300" disabled={localQuantity >= 8}><PlusIcon className="w-6 h-6"/></button>
+            <button onClick={handleIncrease} className="text-orange-600 p-1 rounded-full disabled:text-gray-300" disabled={localQuantity >= 8}><PlusIcon className="w-5 h-5"/></button>
         </div>
-        <button onClick={handleAddToCart} className="bg-[#FF6F00] text-white font-bold py-3 px-6 rounded-full text-base hover:bg-orange-600 transition-colors">
+        <button onClick={handleAddToCart} className="flex-1 bg-[#FF6F00] text-white font-bold py-3 px-6 rounded-full text-base hover:bg-orange-600 transition-colors">
             Agregar
         </button>
       </div>
