@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mercadito Fresco</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Simple scrollbar hiding for webkit browsers */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    /* For IE, Edge and Firefox */
+    .scrollbar-hide {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+    /* Custom bounce animation for cart icon */
+    @keyframes subtle-bounce {
+      0%, 100% {
+        transform: scale(1) translateY(0);
+      }
+      50% {
+        transform: scale(1.2) translateY(-3px);
+      }
+    }
+    .animate-subtle-bounce {
+      animation: subtle-bounce 0.4s ease-out;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://esm.sh/lucide-react@0.400.0"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-100">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
