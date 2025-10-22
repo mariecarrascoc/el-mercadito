@@ -149,7 +149,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack, a
 
       <div className="h-28"></div> 
       
-      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[360px] bg-white px-4 py-3 border-t shadow-[0_-2px_10px_rgba(0,0,0,0.1)] flex items-center gap-3">
+      <div className="fixed bottom-0 w-full bg-white px-4 py-3 border-t shadow-[0_-2px_10px_rgba(0,0,0,0.1)] flex items-center gap-3">
         <div className="flex-shrink-0">
             <p className="text-xs text-gray-600">1 paquete de {product.weight}{product.unit}</p>
             <p className="font-bold text-lg text-gray-900">{formatCurrency(product.price * localQuantity)}</p>

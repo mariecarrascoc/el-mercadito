@@ -86,7 +86,7 @@ export const CartView: React.FC<CartViewProps> = ({ allProducts, onBack }) => {
 
       <div className="h-28" />
 
-      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[360px] bg-white px-4 py-3 border-t shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
+      <div className="fixed bottom-0 w-full bg-white px-4 py-3 border-t shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
         <button className="w-full bg-[#FF6F00] text-white font-bold py-4 rounded-full text-lg hover:bg-orange-600 transition-colors flex justify-between items-center px-6">
             <span>Comprar</span>
             <span>{formatCurrency(subtotal)}</span>

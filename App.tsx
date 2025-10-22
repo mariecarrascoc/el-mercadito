@@ -1,4 +1,5 @@
 
+
 import React, { useState, useMemo } from 'react';
 import { Header } from './components/Header';
 import { CategoryNav } from './components/CategoryNav';
@@ -156,7 +157,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="max-w-[360px] mx-auto bg-gray-50 shadow-lg min-h-screen">
+    <div className="w-full bg-gray-50 min-h-screen">
       <Header searchTerm={searchTerm} onSearchChange={handleSearchChange} onCartClick={showCart} onLogoClick={goHome} />
       {renderContent()}
     </div>
